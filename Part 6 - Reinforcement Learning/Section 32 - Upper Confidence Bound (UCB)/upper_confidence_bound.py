@@ -13,9 +13,9 @@ dataset = pd.read_csv('Ads_CTR_Optimisation.csv')
 import math
 N = 10000
 d = 10
-ads_selected = []
-numbers_of_selections = [0] * d
-sums_of_rewards = [0] * d
+ads_selected = [] # vector used by the histogram
+numbers_of_selections = [0] * d # stores how many times each item was chosen by the algorithm (ex: how many times a specific lever was pulled or how many time an ad was picked)
+sums_of_rewards = [0] * d # stores how many times the selection was sucessful (remember of on-line learning)
 total_reward = 0
 for n in range(0, N):
     ad = 0
