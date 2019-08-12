@@ -33,6 +33,9 @@ for n in range(0, N):
         else:
             # this forces the ad to be chosen in the first rounds
             upper_bound = 1e400
+
+        # The algorithm selects the add with the largest upper confidence bound
+        # among all of the ads for that specific round 'n' (ex: pulling the levers or making an user interact with the ads)
         if upper_bound > max_upper_bound:
             max_upper_bound = upper_bound
             selected_ad = i
