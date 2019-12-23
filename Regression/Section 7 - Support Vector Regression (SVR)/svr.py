@@ -30,7 +30,7 @@ regressor.fit(X, y)
 
 # Predicting a new result
 y_pred = regressor.predict(6.5)
-y_pred = sc_y.inverse_transform(y_pred) # undo feature scaling
+y_pred = sc_y.inverse_transform(y_pred) # Transform labels back to original encoding (undo feature scaling)
 
 # Visualising the SVR results
 plt.scatter(X, y, color = 'red')
